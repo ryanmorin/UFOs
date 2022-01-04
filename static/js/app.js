@@ -47,7 +47,7 @@ function handleClick() {
     // @NOTE: If no date was entered, then filteredData will
     // just be the original tableData.
     buildTable(filteredData);
-  };
+  }
 
   // Attach an event to listen for the form button
 d3.selectAll("#filter-btn").on("click", handleClick);
