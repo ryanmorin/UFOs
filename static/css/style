@@ -1,7 +1,9 @@
 body {
     color: #f7f7f7;
 }
-h3 { color:#f7f7f7;}
+h3 { 
+    color:#f7f7f7;
+}
 
 .jumbotron {
   background-image: url("https://www.nasa.gov/sites/default/files/images/297755main_GPN-2001-000009_full.jpg");
