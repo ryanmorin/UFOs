@@ -24,20 +24,36 @@ function buildTable(data) {
 }
 
 // 1. Create a variable to keep track of all the filters as an object.
-
+var trackFilters = {}
 
 // 3. Use this function to update the filters. 
 function updateFilters() {
 
     // 4a. Save the element that was changed as a variable.
-
     // 4b. Save the value that was changed as a variable.
 
-    // 4c. Save the id of the filter that was changed as a variable.
+    let date =  d3.select("#datetime").property("value")
+    let city = d3.select("#city").property("value")
+    let state = d3.select("#state").property("value")
+    let country = d3.select("#country").property("value")
+    let shape = d3.select("#shape").property("value")
 
+    // 4c. Save the id of the filter that was changed as a variable.
+    trackFilters = {
+        'datetime': date,
+        'city': city,
+        'state': state,
+        'country': country,
+        'shape': shape
+    };
   
     // 5. If a filter value was entered then add that filterId and value
     // to the filters list. Otherwise, clear that filter from the filters object.
+    for (var key in trackFilters) {
+        if (!trackFilters[key]) {
+            delete trackFilters[key];
+        }
+    };
  
   
     // 6. Call function to apply all filters and rebuild the table
