@@ -7,3 +7,10 @@ body {
   background-size: 100% 100%;
   text-align: center;
 }
+
+form  { display: table;      }
+p     { display: table-row;  }
+label { display: table-cell; }
+input { display: table-cell; }
+
+.btn { border-color: white; }
