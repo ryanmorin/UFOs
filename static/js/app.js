@@ -71,9 +71,9 @@ function updateFilters() {
     // 9. Loop through all of the filters and keep any data that
     // matches the filter values
 
-    function checkFilter(item) {
+    function checkFilter(dataTableItem) {
         for (let key in trackFilters) {
-            if (item[key] != trackFilters[key]) {
+            if (dataTableItem[key] != trackFilters[key]) {
                 return false;
             }
         }
