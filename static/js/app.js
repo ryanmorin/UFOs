@@ -65,19 +65,20 @@ function updateFilters() {
   function filterTable() {
   
     // 8. Set the filtered data to the tableData.
-    //let filteredTableData = tableData;
-  
+
+    const filteredTableData = tableData.filter(checkFilter);
+
     // 9. Loop through all of the filters and keep any data that
     // matches the filter values
-    const filteredTableData = tableData.filter(item => {
-      for (var key in trackFilters) {
-        if (item[key] != trackFilters[key]) {
-          return false;
+
+    function checkFilter(item) {
+        for (let key in trackFilters) {
+            if (item[key] != trackFilters[key]) {
+                return false;
+            }
         }
-      }
-      return true; 
-    });
-  
+        return true;
+    };
     // 10. Finally, rebuild the table using the filtered data
     buildTable(filteredTableData);
   }
