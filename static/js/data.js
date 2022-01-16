@@ -999,3 +999,5 @@ var data = [
     comments: "Bright orange object&#44 rapid speed and direction changes .."
   }
 ];
+
+console.log(data.length)
